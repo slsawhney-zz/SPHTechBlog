@@ -1,0 +1,18 @@
+# field.field.node.author.designation.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.storage.node.email
+        - node.type.author
+id: node.author.email
+field_name: email
+entity_type: node
+bundle: author
+label: Email
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {}
+field_type: email

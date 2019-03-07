@@ -1,0 +1,53 @@
+# core.entity_view_display.node.author.default.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.author.designation
+        - field.field.node.author.email
+        - field.field.node.author.description
+        - field.field.node.author.profile_photo
+        - node.type.author
+        - image.style.thumbnail
+    module:
+        - image
+        - text
+        - user
+id: node.author.default
+targetEntityType: node
+bundle: author
+mode: default
+content:
+    designation:
+        label: hidden
+        weight: 1
+        type: string
+        settings: {  }
+        third_party_settings: {  }
+        region: content
+    email:
+        label: hidden
+        weight: 2
+        type: string
+        settings: {  }
+        third_party_settings: {  }
+        region: content
+    description:
+        label: hidden
+        weight: 3
+        type: text_default
+        settings: {  }
+        third_party_settings: {  }
+        region: content
+    profile_photo:
+        label: hidden
+        type: image
+        weight: 3
+        region: content
+        settings:
+          image_style: medium
+          image_link: content
+        third_party_settings: {  }
+    links:
+        weight: 100
+hidden: {  }

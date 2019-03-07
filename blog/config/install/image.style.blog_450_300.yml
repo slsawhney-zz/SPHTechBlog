@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: blog_450_300
+label: Blog 450x300
+effects:
+  blog_image_crop:
+    uuid: blog_image_crop
+    id: image_crop
+    weight: 1
+    data:
+      width: 450
+      height: 300
+      anchor: center-center

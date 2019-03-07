@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.keywords
+    - node.type.blog
+    - taxonomy.vocabulary.tags
+id: node.blog.keywords
+field_name: keywords
+entity_type: node
+bundle: blog
+label: Keywords
+description: 'Enter a comma-separated list. For example: Drupal, Magento, Wordpress'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+field_type: entity_reference

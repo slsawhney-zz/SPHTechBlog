@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: profile_60_70
+label: Profile 60x70
+effects:
+  profile_image_crop:
+    uuid: profile_image_crop
+    id: image_crop
+    weight: 1
+    data:
+      width: 60
+      height: 70
+      anchor: center-center

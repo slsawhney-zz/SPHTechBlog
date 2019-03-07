@@ -1,0 +1,57 @@
+# core.entity_form_display.node.author.default.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.author.designation
+        - field.field.node.author.email
+        - field.field.node.author.description
+        - field.field.node.author.profile_photo
+        - image.style.thumbnail
+        - node.type.author
+    module:
+        - image
+        - path
+        - text
+        - user
+id: node.author.default
+targetEntityType: node
+bundle: author
+mode: default
+content:
+    designation:
+        weight: 1
+        settings: {  }
+        third_party_settings: {  }
+        type: string_textfield
+        region: content
+    email:
+        weight: 2
+        settings: {  }
+        third_party_settings: {  }
+        type: string_textfield
+        region: content
+    description:
+        weight: 3
+        settings:
+            rows: 5
+        placeholder: ''
+        third_party_settings: {  }
+        type: text_textarea
+        region: content
+    profile_photo:
+        type: image_image
+        weight: 4
+        settings:
+            progress_indicator: throbber
+            preview_image_style: thumbnail
+        third_party_settings: {  }
+    status:
+        type: boolean_checkbox
+        settings:
+            display_label: true
+        weight: 120
+        third_party_settings: {  }
+    links:
+        weight: 100
+hidden: {  }

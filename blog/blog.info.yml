@@ -1,0 +1,11 @@
+name: Blog
+description: Adds Blog Content Type.
+package: SPHTechBlog
+type: module
+dependencies:
+  - drupal:node
+  - drupal:field
+  - drupal:image
+  - drupal:author
+core: '8.x'
+project: 'sphtechblog'

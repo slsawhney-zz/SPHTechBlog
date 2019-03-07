@@ -1,0 +1,29 @@
+# core.entity_view_display.node.author.teaser.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - core.entity_view_mode.node.teaser
+        - field.field.node.author.designation
+        - field.field.node.author.email
+        - field.field.node.author.description
+        - field.field.node.author.profile_photo
+        - node.type.author
+        - image.style.thumbnail
+    module:
+        - image
+        - text
+        - user
+id: node.author.teaser
+targetEntityType: node
+bundle: author
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  description: true
+  designation: true
+  email: true
+  profile_photo: true

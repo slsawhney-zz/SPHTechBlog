@@ -1,0 +1,30 @@
+# core.entity_view_display.node.lead_detail.teaser.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - core.entity_view_mode.node.teaser
+        - field.field.node.blog.body
+        - field.field.node.blog.photo
+        - field.field.node.blog.keywords
+        - field.field.node.blog.byline
+        - node.type.blog
+        - image.style.thumbnail
+    module:
+        - image
+        - text
+        - user
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  photo: true
+  photo: true
+  keywords: true
+  byline: true

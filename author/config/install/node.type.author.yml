@@ -1,0 +1,14 @@
+# node.type.author.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - author
+name: 'Author'
+type: author
+description: 'Content type that can be used to provide additional information on <em>Author</em>'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

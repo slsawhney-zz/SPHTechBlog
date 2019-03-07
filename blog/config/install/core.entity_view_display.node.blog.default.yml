@@ -1,0 +1,58 @@
+# core.entity_view_display.node.blog.default.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.blog.body
+        - field.field.node.blog.photo
+        - field.field.node.blog.keywords
+        - field.field.node.blog.byline
+        - node.type.blog
+        - image.style.thumbnail
+    module:
+        - image
+        - text
+        - user
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+    body:
+        label: hidden
+        type: text_default
+        weight: 101
+        settings: {  }
+        third_party_settings: {  }
+        region: content
+    photo:
+        label: hidden
+        type: image
+        weight: 3
+        region: content
+        settings:
+          image_style: medium
+          image_link: content
+        third_party_settings: {  }
+        region: content
+    keywords:
+        type: entity_reference_label
+        weight: 0
+        region: content
+        label: above
+        settings:
+          link: true
+        third_party_settings: {  }
+        region: content
+    byline:
+        type: entity_reference_label
+        weight: 0
+        region: content
+        label: above
+        settings:
+          link: true
+        third_party_settings: {  }
+        region: content
+    links:
+        weight: 100
+hidden: {  }

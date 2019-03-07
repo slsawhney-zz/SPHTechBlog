@@ -1,0 +1,14 @@
+# node.type.blog.yml
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - blog
+name: 'Blog'
+type: blog
+description: 'Content type that can be used to provide additional information on <em>Blog</em>'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

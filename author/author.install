@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the author module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function author_install()
+{
+    // set crop image for author image
+    entity_get_display('node', 'author', 'default')
+            ->setComponent('profile_photo', array(
+                'type' => 'image',
+                'settings' => array(
+                  'image_style' => 'profile_60_70',
+                ),
+                'weight' => 1,
+            ))
+            ->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function author_uninstall()
+{
+    // remove image style to form author image
+    entity_get_display('node', 'author', 'default')
+            ->setComponent('profile_photo', array(
+                'type' => 'image',
+                'settings' => array(
+                  'image_style' => '',
+                ),
+                'weight' => 1,
+            ))
+            ->save();
+    // Delete Created Image Style.
+    \Drupal::configFactory()->getEditable('image.style.profile_60_70')->delete();
+}

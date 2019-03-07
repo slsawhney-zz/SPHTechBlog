@@ -1,0 +1,18 @@
+# field.field.node.author.designation.yml
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.storage.node.designation
+        - node.type.author
+id: node.author.designation
+field_name: designation
+entity_type: node
+bundle: author
+label: Designation
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {}
+field_type: string

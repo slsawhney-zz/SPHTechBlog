@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the blog module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function blog_install()
+{
+    // set crop image for blog image
+    entity_get_display('node', 'blog', 'default')
+            ->setComponent('photo', array(
+                'type' => 'image',
+                'settings' => array(
+                  'image_style' => 'blog_450_300',
+                ),
+                'weight' => 1,
+            ))
+            ->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function blog_uninstall()
+{
+    // remove image style to form blog image
+    entity_get_display('node', 'blog', 'default')
+            ->setComponent('photo', array(
+                'type' => 'image',
+                'settings' => array(
+                  'image_style' => '',
+                ),
+                'weight' => 1,
+            ))
+            ->save();
+    // Delete Created Image Style.
+    \Drupal::configFactory()->getEditable('image.style.blog_450_300')->delete();
+}

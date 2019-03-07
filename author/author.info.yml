@@ -1,0 +1,11 @@
+name: Author
+description: Adds Author Content Type.
+package: SPHTechBlog
+type: module
+dependencies:
+  - drupal:node
+  - drupal:field
+  - drupal:image
+  - responsive_image
+core: '8.x'
+project: 'sphtechblog'
